@@ -15,7 +15,8 @@ model DiscordGuild {
   name String @unique
 
   // snailycad specific fields
-  apiUrl String
+  apiUrl   String?
+  apiToken String?
 }
 
 model DiscordGuildMember {

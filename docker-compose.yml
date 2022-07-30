@@ -4,10 +4,11 @@ services:
   postgres:
     container_name: "snailycad-bot-postgres"
     image: postgres
+    command: -p 55545
     env_file:
       - .env
     ports:
-      - "5433:5432"
+      - "55545:55545"
     networks:
       - cad_bot_network
     volumes:

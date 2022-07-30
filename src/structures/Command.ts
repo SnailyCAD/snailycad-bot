@@ -12,7 +12,7 @@ export interface InteractionCommandOptions {
 
 export interface CommandContext {
   /** the interaction from Discord's API */
-  interaction: DJS.CommandInteraction<"cached">;
+  interaction: DJS.ChatInputCommandInteraction<"cached">;
 }
 
 export abstract class Command {

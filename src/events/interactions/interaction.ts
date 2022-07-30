@@ -7,17 +7,19 @@ export default class InteractionEvent extends Event {
     super({ bot, name: DJS.Events.InteractionCreate });
   }
 
-  private isNsfwChannel(interaction: DJS.CommandInteraction<"cached">) {
+  private isNsfwChannel(interaction: DJS.ChatInputCommandInteraction<"cached">) {
     return interaction.channel instanceof DJS.TextChannel && !interaction.channel.nsfw;
   }
 
-  private isOwner(interaction: DJS.CommandInteraction<"cached">) {
+  private isOwner(interaction: DJS.ChatInputCommandInteraction<"cached">) {
     const owners = process.env["OWNERS"];
     return owners?.includes(interaction.user.id);
   }
 
   async execute(bot: Bot, interaction: DJS.Interaction<"cached">) {
-    if (!interaction.isCommand()) return;
+    if (interaction.type !== DJS.InteractionType.ApplicationCommand) return;
+    if (interaction.commandType !== DJS.ApplicationCommandType.ChatInput) return;
+    if (!interaction.inGuild()) return;
 
     const command = bot.commands.get(interaction.commandName);
     if (!command) return;

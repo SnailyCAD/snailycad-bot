@@ -6,19 +6,25 @@ generator client {
 }
 
 datasource db {
-  provider = "mongodb"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
+}
 
+model DiscordGuild {
+  id   String @id
+  name String @unique
+
+  // snailycad specific fields
+  apiUrl String
 }
 
 model DiscordGuildMember {
-  id             String    @id @default(auto()) @map("_id") @db.ObjectId
+  id             String    @id
   discordId      String
   guildId        String
   cash           Int       @default(0)
   lastDailyUsed  DateTime?
   lastWeeklyUsed DateTime?
-
 
   @@unique([discordId, guildId], name: "discordIdGuildId")
 }

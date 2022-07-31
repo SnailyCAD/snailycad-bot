@@ -4,16 +4,16 @@ import { createCall } from "../../lib/functions/createCall.js";
 
 const callTemplate = createCall();
 
-export default class Call911Command extends Command {
+export default class CallTowCommand extends Command {
   constructor(bot: Bot) {
     super(bot, {
-      name: "call911",
-      description: "Call emergency services",
+      name: "calltow",
+      description: "Call tow services",
       options: callTemplate.defaultCommandArgs,
     });
   }
 
   async execute({ interaction }: CommandContext) {
-    await callTemplate.handler({ type: "911-calls", interaction });
+    await callTemplate.handler({ type: "tow", interaction });
   }
 }

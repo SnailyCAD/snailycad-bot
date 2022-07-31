@@ -9,10 +9,7 @@ export class Bot extends DJS.Client {
 
   constructor() {
     super({
-      intents: [
-        DJS.IntentsBitField.Flags.Guilds,
-        /* provide your intents here */
-      ],
+      intents: [DJS.IntentsBitField.Flags.Guilds],
     });
 
     new EventHandler(this).loadEvents();

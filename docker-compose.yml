@@ -19,7 +19,7 @@ services:
 
     user: node
     image: node:16
-    command: "npm run dev"
+    command: "yarn dev"
     volumes:
       - .:/srv/api
     env_file:

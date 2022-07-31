@@ -1,8 +1,8 @@
 import { Command, type CommandContext } from "../../structures/Command.js";
 import type { Bot } from "../../structures/Bot.js";
 import { prisma } from "../../lib/prisma.js";
-import { request } from "undici";
 import { ApplicationCommandOptionType } from "discord.js";
+import { performAPIRequest } from "../../lib/request.js";
 
 export default class Call911Command extends Command {
   constructor(bot: Bot) {
@@ -12,8 +12,8 @@ export default class Call911Command extends Command {
       options: [
         {
           type: ApplicationCommandOptionType.String,
-          description: "The caller name",
-          name: "caller",
+          description: "The caller's name",
+          name: "name",
           required: true,
         },
         {
@@ -44,17 +44,29 @@ export default class Call911Command extends Command {
       return;
     }
 
-    const location = interaction.options.getString("location", true);
-    const caller = interaction.options.getString("caller", true);
-    const description = interaction.options.getString("description", false);
+    const requestData = {
+      location: interaction.options.getString("location", true),
+      name: interaction.options.getString("name", true),
+      description: interaction.options.getString("description", false),
+    };
 
-    const data = await request(`${dbGuild.apiUrl}/v1/911-calls`, {
+    const response = await performAPIRequest({
+      apiPath: "/911-calls",
       method: "POST",
-      body: JSON.stringify({ location, caller, description }),
+      data: requestData,
+      interaction,
     });
 
-    console.log(data.headers);
+    if (response?.data?.id) {
+      await interaction.reply({
+        content:
+          "Successfully created the 911 call. Active units and Dispatchers have been notified.",
+      });
+      return;
+    }
 
-    console.log({ data });
+    await interaction.reply({
+      content: "Could not create the 911 call. Please try again later.",
+    });
   }
 }

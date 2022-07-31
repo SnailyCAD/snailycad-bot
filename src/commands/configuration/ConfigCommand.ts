@@ -38,6 +38,8 @@ export default class ConfigCommand extends Command {
     const apiToken = interaction.options.getString("api-token");
 
     if (command === "set") {
+      let message = null;
+
       const createUpdateData = {
         id: interaction.guildId,
         name: interaction.guild.name,
@@ -52,25 +54,29 @@ export default class ConfigCommand extends Command {
           await interaction.reply("The URL is not reachable.");
           return;
         }
+
+        message = `Set API URL to ${apiUrl}`;
       }
 
-      const dbGuild = await prisma.discordGuild.upsert({
+      if (apiToken) {
+        message = `Set API URL to ${apiToken}`;
+      }
+
+      await prisma.discordGuild.upsert({
         where: { id: interaction.guildId },
         create: createUpdateData,
         update: createUpdateData,
       });
 
-      await interaction.reply(`Set API URL to ${dbGuild.apiUrl}`);
+      await interaction.reply({ content: message || "No changes made.", ephemeral: true });
     }
   }
 
   private async testURL(url: string) {
-    // todo: test for is-url & /v1
-
     try {
       const response = await request(url);
-      return response.statusCode === 200;
-    } catch {
+      return url.endsWith("/v1") && response.statusCode === 404;
+    } catch (e) {
       return false;
     }
   }

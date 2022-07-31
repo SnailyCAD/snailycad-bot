@@ -8,6 +8,7 @@ export default class ConfigCommand extends Command {
   constructor(bot: Bot) {
     super(bot, {
       name: "config",
+      description: "Set the bot's configuration for this guild",
       options: [
         {
           name: "set",

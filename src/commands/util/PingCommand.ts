@@ -5,7 +5,7 @@ export default class PingCommand extends Command {
   constructor(bot: Bot) {
     super(bot, {
       name: "ping",
-      description: "Returns the bot ping!",
+      description: "Returns the bot ping",
     });
   }
 

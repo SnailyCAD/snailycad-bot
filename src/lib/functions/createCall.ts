@@ -35,7 +35,7 @@ export function createCall() {
       type: ApplicationCommandOptionType.String,
       description: "The call's description",
       name: "description",
-      required: false,
+      required: true,
     },
   ];
 
@@ -54,7 +54,7 @@ export function createCall() {
     const requestData = {
       location: options.interaction.options.getString("location", true),
       name: options.interaction.options.getString("name", true),
-      description: options.interaction.options.getString("description", false),
+      description: options.interaction.options.getString("description", true),
     };
 
     const response = await performAPIRequest({

@@ -4,4 +4,4 @@ Discord.js bot template with ESM, Prisma, MongoDB TypeScript, ESLint and Prettie
 
 ## Installation
 
-[Read the documentation here](https://cad-docs.caspertheghost.me/TODO)
+[Read the documentation here](https://cad-docs.caspertheghost.me/docs/discord-integration/discord-bot)

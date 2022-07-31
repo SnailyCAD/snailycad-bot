@@ -1,6 +1,6 @@
-# discord-bot-template
+# SnailyCADv4 Discord Bot
 
-Discord.js bot template with ESM, Prisma, MongoDB TypeScript, ESLint and Prettier.
+A self-hostable Discord bot that integrates with SnailyCADv4
 
 ## Installation
 

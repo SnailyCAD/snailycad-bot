@@ -1,3 +1,4 @@
+import { captureException } from "@sentry/node";
 import { globby } from "globby";
 import { importFileFromFilename } from "../lib/utils.js";
 import type { Bot } from "../structures/Bot.js";
@@ -18,6 +19,7 @@ export class EventHandler {
       const files = await globby(path);
       await Promise.all(files.map(async (filename) => this.loadEvent(filename)));
     } catch (e) {
+      captureException(e);
       console.log("An error occurred when loading the events", { e });
     }
   }

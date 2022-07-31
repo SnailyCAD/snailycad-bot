@@ -12,6 +12,6 @@ export default class PingCommand extends Command {
   async execute({ interaction }: CommandContext) {
     const ping = this.bot.ws.ping;
 
-    await interaction.reply(`The bot's ping is: ${ping}`);
+    await interaction.reply(`The bot's ping is: ${ping}ms`);
   }
 }

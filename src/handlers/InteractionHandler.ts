@@ -3,6 +3,7 @@ import type { Bot } from "../structures/Bot.js";
 import type { Command } from "../structures/Command.js";
 import type * as DJS from "discord.js";
 import { importFileFromFilename } from "../lib/utils.js";
+import { captureException } from "@sentry/node";
 
 // warning: This can only be initialized in the ready event!
 export class InteractionHandler {
@@ -27,6 +28,7 @@ export class InteractionHandler {
       const interactionLoadTime = Date.now() - loadInteractionsStart;
       console.log(`Interactions loaded: ${interactionLoadTime}ms`);
     } catch (e) {
+      captureException(e);
       console.log(e);
     }
   }

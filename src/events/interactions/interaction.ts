@@ -1,3 +1,4 @@
+import { captureException } from "@sentry/node";
 import * as DJS from "discord.js";
 import type { Bot } from "../../structures/Bot.js";
 import { Event } from "../../structures/Event.js";
@@ -42,6 +43,8 @@ export default class InteractionEvent extends Event {
     try {
       await command.execute({ interaction });
     } catch (err) {
+      captureException(err);
+
       console.error(err);
       if (interaction.replied) return;
 

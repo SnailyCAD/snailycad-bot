@@ -3,8 +3,8 @@ import {
   ApplicationCommandOptionType,
   ChatInputCommandInteraction,
 } from "discord.js";
-import { prisma } from "../prisma";
-import { performAPIRequest } from "../request";
+import { prisma } from "../prisma.js";
+import { performAPIRequest } from "../request.js";
 
 interface Options {
   interaction: ChatInputCommandInteraction<"cached">;

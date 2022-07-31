@@ -7,7 +7,7 @@ const callTemplate = createCall();
 export default class CallTaxiCommand extends Command {
   constructor(bot: Bot) {
     super(bot, {
-      name: "callTaxi",
+      name: "calltaxi",
       description: "Call taxi services",
       options: callTemplate.defaultCommandArgs,
     });

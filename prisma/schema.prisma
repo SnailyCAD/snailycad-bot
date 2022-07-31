@@ -18,14 +18,3 @@ model DiscordGuild {
   apiUrl   String?
   apiToken String?
 }
-
-model DiscordGuildMember {
-  id             String    @id
-  discordId      String
-  guildId        String
-  cash           Int       @default(0)
-  lastDailyUsed  DateTime?
-  lastWeeklyUsed DateTime?
-
-  @@unique([discordId, guildId], name: "discordIdGuildId")
-}

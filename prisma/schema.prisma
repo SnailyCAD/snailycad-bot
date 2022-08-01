@@ -18,3 +18,11 @@ model DiscordGuild {
   apiUrl   String?
   apiToken String?
 }
+
+model DiscordGuildMember {
+  id       String  @id
+  guildId  String
+  apiToken String?
+
+  @@unique([id, guildId], name: "idGuildId")
+}

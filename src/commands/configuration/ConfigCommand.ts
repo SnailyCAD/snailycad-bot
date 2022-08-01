@@ -1,4 +1,4 @@
-import { ApplicationCommandOptionType } from "discord.js";
+import { ApplicationCommandOptionType, PermissionFlagsBits } from "discord.js";
 import { request } from "undici";
 import { prisma } from "../../lib/prisma.js";
 import type { Bot } from "../../structures/Bot.js";
@@ -37,6 +37,14 @@ export default class ConfigCommand extends Command {
     const command = interaction.options.getSubcommand(true);
     const apiUrl = interaction.options.getString("api-url");
     const apiToken = interaction.options.getString("api-token");
+
+    if (interaction.member.permissions.has(PermissionFlagsBits.Administrator)) {
+      await interaction.reply({
+        ephemeral: true,
+        content: "You must be a server administrator to use this command.",
+      });
+      return;
+    }
 
     if (command === "set") {
       let message = null;

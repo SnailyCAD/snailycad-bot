@@ -18,7 +18,9 @@ export default class PingCommand extends Command {
     const embed = new EmbedBuilder()
       .setTitle("Help")
       .setColor([30, 40, 62])
-      .setDescription("**Support server:** https://discord.gg/eGnrPqEH7U");
+      .setDescription(
+        "**Support server:** https://discord.gg/eGnrPqEH7U\n**Documentation:** https://cad-docs.caspertheghost.me/docs/discord-integration/discord-bot/configuration**",
+      );
 
     if (this.bot.user) {
       embed.setFooter({

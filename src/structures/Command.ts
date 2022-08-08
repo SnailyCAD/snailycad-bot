@@ -5,9 +5,6 @@ export interface InteractionCommandOptions {
   name: string;
   description?: string;
   options?: DJS.ApplicationCommandOptionData[];
-
-  ownerOnly?: boolean;
-  nsfwOnly?: boolean;
 }
 
 export interface CommandContext {

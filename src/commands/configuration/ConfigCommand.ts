@@ -38,7 +38,7 @@ export default class ConfigCommand extends Command {
     const apiUrl = interaction.options.getString("api-url");
     const apiToken = interaction.options.getString("api-token");
 
-    if (interaction.member.permissions.has(PermissionFlagsBits.Administrator)) {
+    if (!interaction.member.permissions.has(PermissionFlagsBits.Administrator)) {
       await interaction.reply({
         ephemeral: true,
         content: "You must be a server administrator to use this command.",

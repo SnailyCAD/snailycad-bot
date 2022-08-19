@@ -6,7 +6,6 @@ import { importFileFromFilename } from "../lib/utils.js";
 import { captureException } from "@sentry/node";
 import ms from "pretty-ms";
 
-// warning: This can only be initialized in the ready event!
 export class InteractionHandler {
   bot: Bot;
 

@@ -109,16 +109,22 @@
     "@nodelib/fs.scandir" "2.1.5"
     "fastq" "^1.6.0"
 
-"@prisma/client@^4.1.1":
-  "version" "4.1.1"
+"@prisma/client@^4.2.1":
+  "integrity" "sha512-PZBkY60+k5oix+e6IUfl3ub8TbRLNsPLdfWrdy2eh80WcHTaT+/UfvXf/B7gXedH7FRtbPFHZXk1hZenJiJZFQ=="
+  "resolved" "https://registry.npmjs.org/@prisma/client/-/client-4.2.1.tgz"
+  "version" "4.2.1"
   dependencies:
-    "@prisma/engines-version" "4.1.0-48.8d8414deb360336e4698a65aa45a1fbaf1ce13d8"
+    "@prisma/engines-version" "4.2.0-33.2920a97877e12e055c1333079b8d19cee7f33826"
 
-"@prisma/engines-version@4.1.0-48.8d8414deb360336e4698a65aa45a1fbaf1ce13d8":
-  "version" "4.1.0-48.8d8414deb360336e4698a65aa45a1fbaf1ce13d8"
+"@prisma/engines-version@4.2.0-33.2920a97877e12e055c1333079b8d19cee7f33826":
+  "integrity" "sha512-tktkqdiwqE4QhmE088boPt+FwPj1Jub/zk+5F6sEfcRHzO5yz9jyMD5HFVtiwxZPLx/8Xg9ElnuTi8E5lWVQFQ=="
+  "resolved" "https://registry.npmjs.org/@prisma/engines-version/-/engines-version-4.2.0-33.2920a97877e12e055c1333079b8d19cee7f33826.tgz"
+  "version" "4.2.0-33.2920a97877e12e055c1333079b8d19cee7f33826"
 
-"@prisma/engines@4.1.1":
-  "version" "4.1.1"
+"@prisma/engines@4.2.1":
+  "integrity" "sha512-0KqBwREUOjBiHwITsQzw2DWfLHjntvbqzGRawj4sBMnIiL5CXwyDUKeHOwXzKMtNr1rEjxEsypM14g0CzLRK3g=="
+  "resolved" "https://registry.npmjs.org/@prisma/engines/-/engines-4.2.1.tgz"
+  "version" "4.2.1"
 
 "@sapphire/async-queue@^1.3.2":
   "version" "1.3.2"
@@ -132,60 +138,60 @@
 "@sapphire/snowflake@^3.2.2":
   "version" "3.2.2"
 
-"@sentry/core@7.8.1":
-  "integrity" "sha512-PRivbdIzApi/gSixAxozhOBTylSVdw/9VxaStYHd7JJGhs36KXkV8ylpbCmYO4ap7/Ue9/slzwpvPOJJzmzAgA=="
-  "resolved" "https://registry.npmjs.org/@sentry/core/-/core-7.8.1.tgz"
-  "version" "7.8.1"
+"@sentry/core@7.11.1":
+  "integrity" "sha512-kaDSZ6VNuO4ZZdqUOOX6XM6x+kjo2bMnDQ3IJG51FPvVjr8lXYhXj1Ccxcot3pBYAIWPPby2+vNDOXllmXqoBA=="
+  "resolved" "https://registry.npmjs.org/@sentry/core/-/core-7.11.1.tgz"
+  "version" "7.11.1"
   dependencies:
-    "@sentry/hub" "7.8.1"
-    "@sentry/types" "7.8.1"
-    "@sentry/utils" "7.8.1"
+    "@sentry/hub" "7.11.1"
+    "@sentry/types" "7.11.1"
+    "@sentry/utils" "7.11.1"
     "tslib" "^1.9.3"
 
-"@sentry/hub@7.8.1":
-  "integrity" "sha512-AxwyGyS9Lp4XsURu4t8opa5vZ+NAB6I/n+B/Uix3YZea9z8jdWYAu9vsXSizOrtxekc/i7ZN4bnlNgXVHix0iA=="
-  "resolved" "https://registry.npmjs.org/@sentry/hub/-/hub-7.8.1.tgz"
-  "version" "7.8.1"
+"@sentry/hub@7.11.1":
+  "integrity" "sha512-M6ClgdXdptS0lUBKB5KpXXe2qMQhsoiEN2pEGRI6+auqhfHCUQB1ZXsfjiOYexKC9fwx7TyFyZ9Jcaf2DTxEhw=="
+  "resolved" "https://registry.npmjs.org/@sentry/hub/-/hub-7.11.1.tgz"
+  "version" "7.11.1"
   dependencies:
-    "@sentry/types" "7.8.1"
-    "@sentry/utils" "7.8.1"
+    "@sentry/types" "7.11.1"
+    "@sentry/utils" "7.11.1"
     "tslib" "^1.9.3"
 
-"@sentry/node@^7.8.1":
-  "integrity" "sha512-gQHeIip7QudeK1YWrLyZPc7nfirhbVDJ3gfCfL9mLT724Sk8gKd1kcpU1niI+wwIwY7SOpJqX4Oh/F0lRKjzDQ=="
-  "resolved" "https://registry.npmjs.org/@sentry/node/-/node-7.8.1.tgz"
-  "version" "7.8.1"
+"@sentry/node@^7.11.1":
+  "integrity" "sha512-EAAHou/eHSzwRK0Z5qnQiwXNbkpnjWjloaG979gftA+MS/kM0AxQHdOrSJQbOEaqRf3F7/eC4Hj+1tfglAuaLQ=="
+  "resolved" "https://registry.npmjs.org/@sentry/node/-/node-7.11.1.tgz"
+  "version" "7.11.1"
   dependencies:
-    "@sentry/core" "7.8.1"
-    "@sentry/hub" "7.8.1"
-    "@sentry/types" "7.8.1"
-    "@sentry/utils" "7.8.1"
+    "@sentry/core" "7.11.1"
+    "@sentry/hub" "7.11.1"
+    "@sentry/types" "7.11.1"
+    "@sentry/utils" "7.11.1"
     "cookie" "^0.4.1"
     "https-proxy-agent" "^5.0.0"
     "lru_map" "^0.3.3"
     "tslib" "^1.9.3"
 
-"@sentry/tracing@^7.8.1":
-  "integrity" "sha512-orNVCsMtQUKhvh7GmyJzjOhU6oT7lC7TRT7tTRlyXQVrUmfJZsthmBtyfrTC7QWJ9vXQ0mB4jab8kMT3xE4ltg=="
-  "resolved" "https://registry.npmjs.org/@sentry/tracing/-/tracing-7.8.1.tgz"
-  "version" "7.8.1"
+"@sentry/tracing@^7.11.1":
+  "integrity" "sha512-ilgnHfpdYUWKG/5yAXIfIbPVsCfrC4ONFBR/wN25/hdAyVfXMa3AJx7NCCXxZBOPDWH3hMW8rl4La5yuDbXofg=="
+  "resolved" "https://registry.npmjs.org/@sentry/tracing/-/tracing-7.11.1.tgz"
+  "version" "7.11.1"
   dependencies:
-    "@sentry/hub" "7.8.1"
-    "@sentry/types" "7.8.1"
-    "@sentry/utils" "7.8.1"
+    "@sentry/hub" "7.11.1"
+    "@sentry/types" "7.11.1"
+    "@sentry/utils" "7.11.1"
     "tslib" "^1.9.3"
 
-"@sentry/types@7.8.1":
-  "integrity" "sha512-LOoaeBXVI23Kh5SpIbxSRiJ6+eYZXVOFyPFH1T1mGBj95LPwRMqOdg0lUTmFJGBKbDGDB/YNjNnu1kQ7GrXBXw=="
-  "resolved" "https://registry.npmjs.org/@sentry/types/-/types-7.8.1.tgz"
-  "version" "7.8.1"
+"@sentry/types@7.11.1":
+  "integrity" "sha512-gIEhOPxC2cjrxQ0+K2SFJ1P6e/an5osSxVc9OOtekN28eHtVsXFCLB8XVWeNQnS7N2VkrVrkqORMBz1kvIcvVQ=="
+  "resolved" "https://registry.npmjs.org/@sentry/types/-/types-7.11.1.tgz"
+  "version" "7.11.1"
 
-"@sentry/utils@7.8.1":
-  "integrity" "sha512-isUZjft4HWTOk1Z58KFJ/zzXeFtIJgP82CkYQlW464ZR2WCqPHYlXXXRWZpOHOfMnrf+gWeX9WAGS9rTAdhiSg=="
-  "resolved" "https://registry.npmjs.org/@sentry/utils/-/utils-7.8.1.tgz"
-  "version" "7.8.1"
+"@sentry/utils@7.11.1":
+  "integrity" "sha512-tRVXNT5O9ilkV31pyHeTqA1PcPQfMV/2OR6yUYM4ah+QVISovC0f0ybhByuH5nYg6x/Gsnx1o7pc8L1GE3+O7A=="
+  "resolved" "https://registry.npmjs.org/@sentry/utils/-/utils-7.11.1.tgz"
+  "version" "7.11.1"
   dependencies:
-    "@sentry/types" "7.8.1"
+    "@sentry/types" "7.11.1"
     "tslib" "^1.9.3"
 
 "@swc/cli@^0.1.57":
@@ -196,37 +202,39 @@
     "slash" "3.0.0"
     "source-map" "^0.7.3"
 
-"@swc/core-linux-x64-gnu@1.2.222":
-  "integrity" "sha512-lSKcEntOSV79zgHBPxgslKGkS/br3Ou54h1a5Sb8RpzcHp+uCM9EYwT7gbXQObCJ3KJR3dxeTdsiAzX+I/wzZw=="
-  "resolved" "https://registry.npmjs.org/@swc/core-linux-x64-gnu/-/core-linux-x64-gnu-1.2.222.tgz"
-  "version" "1.2.222"
+"@swc/core-linux-x64-gnu@1.2.239":
+  "integrity" "sha512-OKjj99kfCSrMEvWbWftSAgj29v5TxII+KCAuA284NoGYVcezzaO37C4TfrDjOW5/wtvDfWk97w8FfsOmrWKl0A=="
+  "resolved" "https://registry.npmjs.org/@swc/core-linux-x64-gnu/-/core-linux-x64-gnu-1.2.239.tgz"
+  "version" "1.2.239"
 
-"@swc/core-linux-x64-musl@1.2.222":
-  "integrity" "sha512-lWVUgRx1tcNjfT2vu6PZ12/J/8Y0Idyp8OUwaYzPvHjXbf9ThGmsaBzN694z9FVKyMECC1f0r/7PGqXPr/AS2Q=="
-  "resolved" "https://registry.npmjs.org/@swc/core-linux-x64-musl/-/core-linux-x64-musl-1.2.222.tgz"
-  "version" "1.2.222"
+"@swc/core-linux-x64-musl@1.2.239":
+  "integrity" "sha512-BsX/ivpDmYFeqOHz5gA5OqtskO5mkEKyBRhhVnzc9AG9tbhz8X5zZMLPV398RCn48lmS/uS8MPXHkJKAlYA1BA=="
+  "resolved" "https://registry.npmjs.org/@swc/core-linux-x64-musl/-/core-linux-x64-musl-1.2.239.tgz"
+  "version" "1.2.239"
 
-"@swc/core@^1.2.222", "@swc/core@^1.2.66", "@swc/core@>=1.2.50":
-  "integrity" "sha512-lB/R5F0Jd/vP4LA6UEIcaWFFP1URW6ufRfXceZI5jB0m6xHnIp+uGr3pOFSzxQIGKJ/XJ6aWY4uhsxrZxYoCwA=="
-  "resolved" "https://registry.npmjs.org/@swc/core/-/core-1.2.222.tgz"
-  "version" "1.2.222"
+"@swc/core@^1.2.239", "@swc/core@^1.2.66", "@swc/core@>=1.2.50":
+  "integrity" "sha512-U3tbnOBykfLGIJRQ+bSxVsgyTPQ5l9zTe2YQq3GULnxe6rfsgEYN54Uelp9vr3w7LXfW0k+bteXS6YGLpmnEfw=="
+  "resolved" "https://registry.npmjs.org/@swc/core/-/core-1.2.239.tgz"
+  "version" "1.2.239"
   optionalDependencies:
-    "@swc/core-android-arm-eabi" "1.2.222"
-    "@swc/core-android-arm64" "1.2.222"
-    "@swc/core-darwin-arm64" "1.2.222"
-    "@swc/core-darwin-x64" "1.2.222"
-    "@swc/core-freebsd-x64" "1.2.222"
-    "@swc/core-linux-arm-gnueabihf" "1.2.222"
-    "@swc/core-linux-arm64-gnu" "1.2.222"
-    "@swc/core-linux-arm64-musl" "1.2.222"
-    "@swc/core-linux-x64-gnu" "1.2.222"
-    "@swc/core-linux-x64-musl" "1.2.222"
-    "@swc/core-win32-arm64-msvc" "1.2.222"
-    "@swc/core-win32-ia32-msvc" "1.2.222"
-    "@swc/core-win32-x64-msvc" "1.2.222"
+    "@swc/core-android-arm-eabi" "1.2.239"
+    "@swc/core-android-arm64" "1.2.239"
+    "@swc/core-darwin-arm64" "1.2.239"
+    "@swc/core-darwin-x64" "1.2.239"
+    "@swc/core-freebsd-x64" "1.2.239"
+    "@swc/core-linux-arm-gnueabihf" "1.2.239"
+    "@swc/core-linux-arm64-gnu" "1.2.239"
+    "@swc/core-linux-arm64-musl" "1.2.239"
+    "@swc/core-linux-x64-gnu" "1.2.239"
+    "@swc/core-linux-x64-musl" "1.2.239"
+    "@swc/core-win32-arm64-msvc" "1.2.239"
+    "@swc/core-win32-ia32-msvc" "1.2.239"
+    "@swc/core-win32-x64-msvc" "1.2.239"
 
-"@swc/helpers@^0.4.3":
-  "version" "0.4.3"
+"@swc/helpers@^0.4.7":
+  "integrity" "sha512-jJKr/2JOivCQxb5Xpli3asedRLH34QgJ3G+7gm6CoCOwt/LDDX9g67OuxvjFOiYZfngWYB66ZbjU6cUNtQdavg=="
+  "resolved" "https://registry.npmjs.org/@swc/helpers/-/helpers-0.4.7.tgz"
+  "version" "0.4.7"
   dependencies:
     "tslib" "^2.4.0"
 
@@ -257,8 +265,10 @@
 "@types/minimatch@*":
   "version" "3.0.5"
 
-"@types/node@*", "@types/node@^18.6.3":
-  "version" "18.6.3"
+"@types/node@*", "@types/node@^18.7.6":
+  "integrity" "sha512-EdxgKRXgYsNITy5mjjXjVE/CS8YENSdhiagGrLqjG0pvA2owgJ6i4l7wy/PFZGC0B1/H20lWKN7ONVDNYDZm7A=="
+  "resolved" "https://registry.npmjs.org/@types/node/-/node-18.7.6.tgz"
+  "version" "18.7.6"
 
 "@types/normalize-package-data@^2.4.0":
   "version" "2.4.1"
@@ -501,8 +511,10 @@
 "discord-api-types@^0.36.3":
   "version" "0.36.3"
 
-"discord.js@^14.1.2":
-  "version" "14.1.2"
+"discord.js@^14.2.0":
+  "integrity" "sha512-kIGhEeOB1d9k7whL9HCCuRuzK2GL7i/hTesYINOZ2szWm4TOsBVwRU+i9O/zDb2M+Gvff4SJ4EpAtCVV0okgVw=="
+  "resolved" "https://registry.npmjs.org/discord.js/-/discord.js-14.2.0.tgz"
+  "version" "14.2.0"
   dependencies:
     "@discordjs/builders" "^1.1.0"
     "@discordjs/collection" "^1.0.1"
@@ -513,7 +525,7 @@
     "fast-deep-equal" "^3.1.3"
     "lodash.snakecase" "^4.1.1"
     "tslib" "^2.4.0"
-    "undici" "^5.8.0"
+    "undici" "^5.8.2"
     "ws" "^8.8.1"
 
 "doctrine@^3.0.0":
@@ -593,8 +605,10 @@
 "eslint-visitor-keys@^3.3.0":
   "version" "3.3.0"
 
-"eslint@*", "eslint@^6.0.0 || ^7.0.0 || ^8.0.0", "eslint@^7.0.0 || ^8.0.0", "eslint@^8.21.0", "eslint@>=5", "eslint@>=7", "eslint@>=7.0.0", "eslint@>=7.28.0", "eslint@>=8.8.0":
-  "version" "8.21.0"
+"eslint@*", "eslint@^6.0.0 || ^7.0.0 || ^8.0.0", "eslint@^7.0.0 || ^8.0.0", "eslint@^8.22.0", "eslint@>=5", "eslint@>=7", "eslint@>=7.0.0", "eslint@>=7.28.0", "eslint@>=8.8.0":
+  "integrity" "sha512-ci4t0sz6vSRKdmkOGmprBo6fmI4PrphDFMy5JEq/fNS0gQkJM3rLmrqcp8ipMcdobH3KtUP40KniAE9W19S4wA=="
+  "resolved" "https://registry.npmjs.org/eslint/-/eslint-8.22.0.tgz"
+  "version" "8.22.0"
   dependencies:
     "@eslint/eslintrc" "^1.3.0"
     "@humanwhocodes/config-array" "^0.10.4"
@@ -1083,10 +1097,12 @@
   dependencies:
     "parse-ms" "^3.0.0"
 
-"prisma@*", "prisma@^4.1.1":
-  "version" "4.1.1"
+"prisma@*", "prisma@^4.2.1":
+  "integrity" "sha512-HuYqnTDgH8atjPGtYmY0Ql9XrrJnfW7daG1PtAJRW0E6gJxc50lY3vrIDn0yjMR3TvRlypjTcspQX8DT+xD4Sg=="
+  "resolved" "https://registry.npmjs.org/prisma/-/prisma-4.2.1.tgz"
+  "version" "4.2.1"
   dependencies:
-    "@prisma/engines" "4.1.1"
+    "@prisma/engines" "4.2.1"
 
 "pstree.remy@^1.1.8":
   "version" "1.1.8"
@@ -1330,8 +1346,10 @@
 "undefsafe@^2.0.5":
   "version" "2.0.5"
 
-"undici@^5.8.0":
-  "version" "5.8.0"
+"undici@^5.8.0", "undici@^5.8.2", "undici@^5.9.1":
+  "integrity" "sha512-6fB3a+SNnWEm4CJbgo0/CWR8RGcOCQP68SF4X0mxtYTq2VNN8T88NYrWVBAeSX+zb7bny2dx2iYhP3XHi00omg=="
+  "resolved" "https://registry.npmjs.org/undici/-/undici-5.9.1.tgz"
+  "version" "5.9.1"
 
 "uri-js@^4.2.2":
   "version" "4.4.1"

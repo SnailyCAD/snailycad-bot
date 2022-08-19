@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "npx prisma db push && nodemon",
     "build": "npx prisma generate && npx swc ./src -d dist",
-    "start": "npx prisma migrate deploy && NODE_ENV=production node dist/index.js",
+    "start": "npx prisma migrate deploy && node dist/index.js",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json}\" --ignore-path .gitignore",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "test-tsc": "tsc --noEmit",

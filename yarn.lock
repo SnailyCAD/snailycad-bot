@@ -141,9 +141,9 @@
   version "4.3.0-32.c875e43600dfe042452e0b868f7a48b817b9640b"
   resolved "https://registry.npmjs.org/@prisma/engines-version/-/engines-version-4.3.0-32.c875e43600dfe042452e0b868f7a48b817b9640b.tgz"
 
-"@prisma/engines@4.3.1":
-  version "4.3.1"
-  resolved "https://registry.npmjs.org/@prisma/engines/-/engines-4.3.1.tgz"
+"@prisma/engines@4.4.0":
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/@prisma/engines/-/engines-4.4.0.tgz#6ca7d3ce8eee08dcfa82311b0a02f5ccaac7dc0c"
 
 "@sapphire/async-queue@^1.5.0":
   version "1.5.0"
@@ -1341,11 +1341,11 @@ pretty-ms@^8.0.0:
   dependencies:
     parse-ms "^3.0.0"
 
-prisma@^4.3.1:
-  version "4.3.1"
-  resolved "https://registry.npmjs.org/prisma/-/prisma-4.3.1.tgz"
+prisma@^4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/prisma/-/prisma-4.4.0.tgz#0c53324bf6a29474636b3e1964e0d72e0277bf8f"
   dependencies:
-    "@prisma/engines" "4.3.1"
+    "@prisma/engines" "4.4.0"
 
 pstree.remy@^1.1.8:
   version "1.1.8"

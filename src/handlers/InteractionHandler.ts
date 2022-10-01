@@ -26,7 +26,7 @@ export class InteractionHandler {
       await Promise.all(files.map(async (filename) => this.loadInteraction(filename)));
 
       const interactionLoadTime = Date.now() - loadInteractionsStart;
-      console.log(`Interactions loaded: ${ms(interactionLoadTime)}`);
+      console.log(`All interactions loaded: ${ms(interactionLoadTime)}`);
     } catch (e) {
       captureException(e);
       console.log(e);

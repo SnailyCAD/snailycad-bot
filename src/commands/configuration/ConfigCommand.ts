@@ -1,4 +1,4 @@
-import { ApplicationCommandOptionType, PermissionFlagsBits } from "discord.js";
+import { ApplicationCommandOptionType, inlineCode, PermissionFlagsBits } from "discord.js";
 import { request } from "undici";
 import { prisma } from "../../lib/prisma.js";
 import type { Bot } from "../../structures/Bot.js";
@@ -64,11 +64,11 @@ export default class ConfigCommand extends Command {
           return;
         }
 
-        message = `Set API URL to ${apiUrl}`;
+        message = `Successfully saved API URL (${inlineCode(apiUrl)}). `;
       }
 
       if (apiToken) {
-        message = `Set API URL to ${apiToken}`;
+        message += "Successfully saved API Token";
       }
 
       await prisma.discordGuild.upsert({

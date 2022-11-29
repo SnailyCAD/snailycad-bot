@@ -25,9 +25,9 @@ export async function performAPIRequest<T>(options: Options<T>) {
       "content-type": "application/json",
       [tokenData.headerName]: tokenData.token,
     },
-  });
+  }).catch(() => null);
 
-  const json = await response.body.json().catch(() => null);
+  const json = (await response?.body.json().catch(() => null)) ?? null;
   const errors = json?.errors ?? [];
   const data = json;
 

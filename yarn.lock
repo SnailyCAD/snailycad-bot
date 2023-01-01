@@ -275,17 +275,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sentry/core@npm:7.21.1":
-  version: 7.21.1
-  resolution: "@sentry/core@npm:7.21.1"
-  dependencies:
-    "@sentry/types": 7.21.1
-    "@sentry/utils": 7.21.1
-    tslib: ^1.9.3
-  checksum: 96d493ddde5624cfd06146a72758eae979eee974e450f0748cca63973ffc1e0575467fbaa9df2e25e4291d5344845b9413a075390f37e89eea3f9a0cc2d95122
-  languageName: node
-  linkType: hard
-
 "@sentry/core@npm:7.22.0":
   version: 7.22.0
   resolution: "@sentry/core@npm:7.22.0"
@@ -297,18 +286,29 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sentry/node@npm:^7.21.1":
-  version: 7.21.1
-  resolution: "@sentry/node@npm:7.21.1"
+"@sentry/core@npm:7.28.1":
+  version: 7.28.1
+  resolution: "@sentry/core@npm:7.28.1"
   dependencies:
-    "@sentry/core": 7.21.1
-    "@sentry/types": 7.21.1
-    "@sentry/utils": 7.21.1
+    "@sentry/types": 7.28.1
+    "@sentry/utils": 7.28.1
+    tslib: ^1.9.3
+  checksum: 8c9e89f8a4efe84a925b5e626828dd90a714b7c017503b04d7bf754fd7e402f0ed6449250d3c03a40493b6fc2323f804f172c6b792fe2003531afdc578f1587a
+  languageName: node
+  linkType: hard
+
+"@sentry/node@npm:^7.28.1":
+  version: 7.28.1
+  resolution: "@sentry/node@npm:7.28.1"
+  dependencies:
+    "@sentry/core": 7.28.1
+    "@sentry/types": 7.28.1
+    "@sentry/utils": 7.28.1
     cookie: ^0.4.1
     https-proxy-agent: ^5.0.0
     lru_map: ^0.3.3
     tslib: ^1.9.3
-  checksum: 45f99ca9c3dd5a2aeef4d1366c31f4cca3dc5bfc79698aeaf2ff2e966165702e26a395b0fecca807b672f7fdec523a92ddb37def09728b16b39f8aef7776179f
+  checksum: 4fdf01b60961feb08d812ed6bfe6d08c4dca1fb0d62eeb4142dd9ea35e20aa53be3154e18ce42f94fb6b53f0f5df9243f90e876b2ea4a12c59fb8d6fc759e868
   languageName: node
   linkType: hard
 
@@ -324,13 +324,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sentry/types@npm:7.21.1":
-  version: 7.21.1
-  resolution: "@sentry/types@npm:7.21.1"
-  checksum: 0c89b3077aae599d4f4d918449c98b2da6be3820ec99036bb600c6e977ec0a6a906cc12bcb373ef42408b2e081163088c97f185cb349d1fdb2fc704a73de259b
-  languageName: node
-  linkType: hard
-
 "@sentry/types@npm:7.22.0":
   version: 7.22.0
   resolution: "@sentry/types@npm:7.22.0"
@@ -338,13 +331,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sentry/utils@npm:7.21.1":
-  version: 7.21.1
-  resolution: "@sentry/utils@npm:7.21.1"
-  dependencies:
-    "@sentry/types": 7.21.1
-    tslib: ^1.9.3
-  checksum: caf6d913c1dcd10b03aa1bb143dc2e3f5d681714b52ad8e83155f9db0be998fb4014251bfa4434975a42df74201f1a83cef06e2ad9ab35a15bbdd1fd5a1594bf
+"@sentry/types@npm:7.28.1":
+  version: 7.28.1
+  resolution: "@sentry/types@npm:7.28.1"
+  checksum: 57dcd5737e29990b15c1d723c47b125d325ead0766e2729c3bd0f499f6e034a9ff81b9474546ea6ecd2216b4956dbdcf342ecc13ef5a202468fd732ffb687cbf
   languageName: node
   linkType: hard
 
@@ -355,6 +345,16 @@ __metadata:
     "@sentry/types": 7.22.0
     tslib: ^1.9.3
   checksum: c125c848037d2b3cb7f93822e47dd7d16e8b92dbd10109703eb5d569aef257342ec201539a86c6910497e9374891e8554ff9b7a17d8d97387675d4967f6cb590
+  languageName: node
+  linkType: hard
+
+"@sentry/utils@npm:7.28.1":
+  version: 7.28.1
+  resolution: "@sentry/utils@npm:7.28.1"
+  dependencies:
+    "@sentry/types": 7.28.1
+    tslib: ^1.9.3
+  checksum: 83a6b66b879a827f5656db02cdd23362f3158746a8da42c1683d8d5d0e5ff8ba8e74058ff8d3dea8924a9f307b74c3e021e26167b9296707f7afe08971c7f4ae
   languageName: node
   linkType: hard
 
@@ -1180,7 +1180,7 @@ __metadata:
     "@casper124578/eslint-config": ^5.0.1
     "@discordjs/builders": ^1.4.0
     "@prisma/client": ^4.6.1
-    "@sentry/node": ^7.21.1
+    "@sentry/node": ^7.28.1
     "@sentry/tracing": ^7.22.0
     "@swc/cli": ^0.1.57
     "@swc/core": ^1.3.21

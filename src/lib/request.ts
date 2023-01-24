@@ -45,7 +45,7 @@ async function getTokenByType<T>(options: Pick<Options<T>, "tokenType" | "intera
       },
     });
 
-    if (!dbUser || !dbUser.apiToken) {
+    if (!dbUser?.apiToken) {
       await options.interaction.reply({
         ephemeral: true,
         content: "You must set your user API Token first: `/user-config set`.",
@@ -60,7 +60,7 @@ async function getTokenByType<T>(options: Pick<Options<T>, "tokenType" | "intera
       where: { id: options.interaction.guildId },
     });
 
-    if (!dbGuild || !dbGuild.apiToken || !dbGuild.apiUrl) {
+    if (!dbGuild?.apiToken || !dbGuild.apiUrl) {
       await options.interaction.reply(
         "This server is not configured. Use the `/config set api-url` command to configure this server.",
       );

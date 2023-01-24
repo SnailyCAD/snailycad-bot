@@ -22,7 +22,7 @@ export default class PanicButtonCommand extends Command {
       where: { idGuildId: { guildId: interaction.guildId, id: interaction.user.id } },
     });
 
-    if (!dbUser || !dbUser.apiToken) {
+    if (!dbUser?.apiToken) {
       await interaction.reply({
         ephemeral: true,
         content: "You must set your user API Token first: `/user-config set`.",
@@ -50,7 +50,7 @@ export default class PanicButtonCommand extends Command {
       interaction,
     });
 
-    if (!response || !response.data?.id) {
+    if (!response?.data?.id) {
       return null;
     }
 

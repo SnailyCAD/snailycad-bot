@@ -325,9 +325,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@swc/cli@npm:^0.1.59":
-  version: 0.1.59
-  resolution: "@swc/cli@npm:0.1.59"
+"@swc/cli@npm:^0.1.60":
+  version: 0.1.60
+  resolution: "@swc/cli@npm:0.1.60"
   dependencies:
     bin-wrapper: ^4.1.0
     commander: ^7.1.0
@@ -345,7 +345,7 @@ __metadata:
     spack: bin/spack.js
     swc: bin/swc.js
     swcx: bin/swcx.js
-  checksum: d9fe4bf1330573c34204bf4459adb9ccdc1eaa516ac5bf7b572b3ee170163e40e0ef6e5f9b049a00805c0309064e28e215a7e60ba08ddad18d039e72ce56a001
+  checksum: 97239fd0601bb30c9f519c87903942640450c73cee3dd652c18789daaf8c451103bf144e164be44b6a62c69583c8e10de5e1c487ca8bf2ab6520681ee7a9a009
   languageName: node
   linkType: hard
 
@@ -1460,7 +1460,7 @@ __metadata:
     "@discordjs/builders": ^1.4.0
     "@prisma/client": ^4.9.0
     "@sentry/node": ^7.33.0
-    "@swc/cli": ^0.1.59
+    "@swc/cli": ^0.1.60
     "@swc/core": ^1.3.28
     "@swc/helpers": ^0.4.14
     "@types/glob": ^8.0.1

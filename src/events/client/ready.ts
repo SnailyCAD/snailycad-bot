@@ -16,6 +16,6 @@ export default class ReadyEvent extends Event {
 
     new InteractionHandler(bot).loadInteractions();
 
-    bot.user?.setActivity("snailycad.caspertheghost.me", { type: DJS.ActivityType.Watching });
+    bot.user?.setActivity("snailycad.org", { type: DJS.ActivityType.Watching });
   }
 }

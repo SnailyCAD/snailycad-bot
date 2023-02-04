@@ -19,7 +19,7 @@ export default class PingCommand extends Command {
       .setTitle("Help")
       .setColor([30, 40, 62])
       .setDescription(
-        "**Support server:** https://discord.gg/eGnrPqEH7U\n**Documentation:** https://cad-docs.caspertheghost.me/docs/discord-integration/discord-bot/configuration",
+        "**Support server:** https://discord.gg/eGnrPqEH7U\n**Documentation:** https://docs.snailycad.org/docs/discord-integration/discord-bot/configuration",
       );
 
     if (this.bot.user) {

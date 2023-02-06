@@ -57,7 +57,7 @@ export default class ConfigCommand extends Command {
       };
 
       if (apiUrl) {
-        const isURLReachable = await this.testURL(apiUrl);
+        const isURLReachable = await this.isAPIURLAccessible(apiUrl);
 
         if (!isURLReachable) {
           await interaction.reply("The URL is not reachable.");
@@ -81,10 +81,10 @@ export default class ConfigCommand extends Command {
     }
   }
 
-  private async testURL(url: string) {
+  private async isAPIURLAccessible(url: string) {
     try {
       const response = await request(url);
-      return url.endsWith("/v1") && response.statusCode === 404;
+      return url.endsWith("/v1") && response.statusCode !== 404;
     } catch (e) {
       return false;
     }

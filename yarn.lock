@@ -1335,7 +1335,7 @@ __metadata:
     regenerator-runtime: ^0.13.11
     ts-node: ^10.9.1
     typescript: ^4.9.5
-    undici: ^5.17.1
+    undici: ^5.20.0
   languageName: unknown
   linkType: soft
 
@@ -3868,12 +3868,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici@npm:^5.13.0, undici@npm:^5.17.1":
+"undici@npm:^5.13.0":
   version: 5.17.1
   resolution: "undici@npm:5.17.1"
   dependencies:
     busboy: ^1.6.0
   checksum: cdb3706db7b77c84d12949a01954644c68ff3a8da437adc53a2483741fa0b2e2055ad0ef6032d64a66f45bcd23d21162e92784a172096bc2b19d690b6afeb6d8
+  languageName: node
+  linkType: hard
+
+"undici@npm:^5.20.0":
+  version: 5.20.0
+  resolution: "undici@npm:5.20.0"
+  dependencies:
+    busboy: ^1.6.0
+  checksum: 25412a785b2bd0b12f0bb0ec47ef00aa7a611ca0e570cb7af97cffe6a42e0d78e4b15190363a43771e9002defc3c6647c1b2d52201b3f64e2196819db4d150d3
   languageName: node
   linkType: hard
 

@@ -32,7 +32,7 @@
     "eslint": "^8.39.0",
     "nodemon": "^2.0.22",
     "prettier": "^2.8.8",
-    "prisma": "^4.13.0",
+    "prisma": "^4.15.0",
     "regenerator-runtime": "^0.13.11",
     "ts-node": "^10.9.1",
     "typescript": "^5.0.4"

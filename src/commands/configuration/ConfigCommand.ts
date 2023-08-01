@@ -47,7 +47,7 @@ export default class ConfigCommand extends Command {
     }
 
     if (command === "set") {
-      let message = null;
+      let message;
 
       const createUpdateData = {
         id: interaction.guildId,

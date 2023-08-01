@@ -30,6 +30,12 @@ export class EventHandler {
       constructorOptions: [this.bot],
     });
 
-    this.bot.on(event.name, event.execute.bind(null, this.bot));
+    this.bot.on(event.name, async (...args) => {
+      try {
+        event.execute(this.bot, ...args);
+      } catch (err) {
+        captureException(err);
+      }
+    });
   }
 }

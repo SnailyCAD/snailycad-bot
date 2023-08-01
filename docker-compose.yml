@@ -18,7 +18,7 @@ services:
     container_name: "snaily-cad-bot"
 
     user: node
-    image: node:16
+    image: node:18
     command: "yarn dev"
     volumes:
       - .:/srv/api

@@ -20,9 +20,10 @@ export default class InteractionEvent extends Event {
       await command.execute({ interaction });
     } catch (err) {
       captureException(err);
-
       console.error(err);
-      if (interaction.replied) return;
+
+      const reply = await interaction.fetchReply().catch(() => null);
+      if (reply?.id) return;
 
       if (interaction.deferred) {
         interaction.editReply({ content: "An error occurred! Please try again later." });

@@ -19,7 +19,7 @@ services:
 
     user: node
     image: node:18
-    command: "pnpm run start"
+    command: "yarn start"
     volumes:
       - .:/srv/api
     env_file:

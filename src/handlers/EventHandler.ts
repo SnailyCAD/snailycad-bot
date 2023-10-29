@@ -14,7 +14,7 @@ export class EventHandler {
   async loadEvents() {
     try {
       const path =
-        process.env["NODE_ENV"] === "production" ? "./dist/events/**/*.js" : "./src/events/**/*.ts";
+        process.env.NODE_ENV === "production" ? "./dist/events/**/*.js" : "./src/events/**/*.ts";
 
       const files = await globby(path);
       await Promise.all(files.map(async (filename) => this.loadEvent(filename)));

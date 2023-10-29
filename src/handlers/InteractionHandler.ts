@@ -16,7 +16,7 @@ export class InteractionHandler {
   async loadInteractions() {
     try {
       const path =
-        process.env["NODE_ENV"] === "production"
+        process.env.NODE_ENV === "production"
           ? "./dist/commands/**/*.js"
           : "./src/commands/**/*.ts";
 

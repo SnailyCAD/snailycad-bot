@@ -27,7 +27,11 @@ export async function performAPIRequest<T>(options: Options<T>) {
     },
   }).catch(() => null);
 
-  const json = ((await response?.body.json().catch(() => null)) as any) ?? null;
+  if (!response) {
+    return null;
+  }
+
+  const json = (await response.body.json().catch(() => null)) as any | null;
   const errors = json?.errors ?? [];
   const data = json;
 

@@ -73,10 +73,12 @@ export function createCall() {
       return;
     }
 
-    await options.interaction.reply({
-      ephemeral: true,
-      content: `Could not create a ${TYPED_NAMES[options.type]} call. Please try again later.`,
-    });
+    if (!options.interaction.replied) {
+      await options.interaction.reply({
+        ephemeral: true,
+        content: `Could not create a ${TYPED_NAMES[options.type]} call. Please try again later.`,
+      });
+    }
   }
 
   return {

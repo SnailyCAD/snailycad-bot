@@ -709,12 +709,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^20.8.9":
-  version: 20.8.9
-  resolution: "@types/node@npm:20.8.9"
+"@types/node@npm:^20.10.1":
+  version: 20.10.1
+  resolution: "@types/node@npm:20.10.1"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 71e0023342272e63c47f3fab6082bd6c89d0b0c4262a1c2d0d52458560077f5c28ef5cfe704306eac43fc2e5111bef4e1cdbf08f565650520fad5e54005a8836
+  checksum: 703c3cc5bdb2818a16f87019fe4072bfd66489bb300338970260c5b84dd2129595995c41b28773c3b7d9d1a64f36fec59a741629ec466f2aeddad7a9d0c027ac
   languageName: node
   linkType: hard
 
@@ -3780,7 +3780,7 @@ __metadata:
     "@swc/core": "npm:^1.3.95"
     "@swc/helpers": "npm:^0.5.3"
     "@types/glob": "npm:^8.1.0"
-    "@types/node": "npm:^20.8.9"
+    "@types/node": "npm:^20.10.1"
     discord.js: "npm:^14.13.0"
     dotenv: "npm:^16.3.1"
     eslint: "npm:^8.52.0"

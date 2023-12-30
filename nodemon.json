@@ -1,7 +1,0 @@
-{
-  "watch": [
-    "**/*.ts"
-  ],
-  "exec": "node --import tsx ./src/index.ts",
-  "ext": "ts"
-}

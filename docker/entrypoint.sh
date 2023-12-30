@@ -9,5 +9,5 @@ echo "╚══════╝╚═╝  ╚═══╝╚═╝  ╚═╝╚�
 
 yarn install
 
-[ $NODE_ENV == "development" ] && yarn run dev
-[ $NODE_ENV == "production" ] && yarn run start
+[ $NODE_ENV == "development" ] && echo "App running in development mode" && yarn run dev
+[ $NODE_ENV == "production" ] && echo "App running in production mode" && yarn run build && yarn run start

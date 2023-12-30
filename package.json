@@ -11,9 +11,9 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "test-tsc": "tsc --noEmit",
     "postinstall": "prisma generate",
-    "docker-dev:start": "docker compose -f dev.compose.yaml up -d",
+    "docker-dev:start": "docker compose -f dev.compose.yaml up -d --build",
     "docker-dev:stop": "docker compose -f dev.compose.yaml down",
-    "docker-prod:start": "docker compose -f prod.compose.yaml up -d",
+    "docker-prod:start": "docker compose -f prod.compose.yaml up -d --build",
     "docker-prod:stop": "docker compose -f prod.compose.yaml down"
   },
   "dependencies": {

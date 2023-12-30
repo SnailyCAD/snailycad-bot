@@ -3,6 +3,7 @@ node_modules
 .env
 dist
 .data
+.dev-data
 
 .yarn/*
 !.yarn/patches

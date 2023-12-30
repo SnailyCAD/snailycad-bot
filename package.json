@@ -4,13 +4,17 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
-    "dev": "npx prisma db push && nodemon",
+    "dev": "npx prisma migrate dev && nodemon",
     "build": "npx prisma generate && npx swc ./src -d dist",
     "start": "npx prisma migrate deploy && node dist/index.js",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json}\" --ignore-path .gitignore",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "test-tsc": "tsc --noEmit",
-    "postinstall": "npx prisma generate"
+    "postinstall": "npx prisma generate",
+    "docker-dev:start": "docker compose -f dev.compose.yaml up -d",
+    "docker-dev:stop": "docker compose -f dev.compose.yaml down",
+    "docker-prod:start": "docker compose -f prod.compose.yaml up -d",
+    "docker-prod:stop": "docker compose -f prod.compose.yaml down"
   },
   "dependencies": {
     "@discordjs/builders": "^1.6.5",
@@ -34,7 +38,7 @@
     "prettier": "^3.0.3",
     "prisma": "^5.5.2",
     "regenerator-runtime": "^0.14.0",
-    "ts-node": "^10.9.1",
+    "tsx": "^4.7.0",
     "typescript": "^5.2.2"
   },
   "packageManager": "yarn@4.0.1"

@@ -1,5 +1,7 @@
 {
-  "watch": ["**/*.ts"],
-  "exec": "ts-node --esm src/index.ts",
-  "ext": "js ts"
+  "watch": [
+    "**/*.ts"
+  ],
+  "exec": "node --import tsx ./src/index.ts",
+  "ext": "ts"
 }

@@ -10,15 +10,11 @@ services:
     ports:
       - "${DB_PORT:-5554}:${DB_PORT:-5554}"
     volumes:
-      - snailybot-dev-db-data:/var/lib/postgresql/data
+      - .dev-data:/var/lib/postgresql/data
 
   api:
     container_name: "snaily-cad-bot"
     image: snaily-cad-bot:dev
-    build:
-      context: .
-      dockerfile: docker/Dockerfile
-      target: development
     volumes:
       - .:/srv
     env_file:
@@ -27,6 +23,3 @@ services:
       - NODE_ENV=development
     depends_on:
       - postgres
-
-volumes:
-  snailybot-dev-db-data:

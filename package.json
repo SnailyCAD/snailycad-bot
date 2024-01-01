@@ -11,9 +11,12 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "test-tsc": "tsc --noEmit",
     "postinstall": "prisma generate",
-    "docker-dev:start": "docker compose -f dev.compose.yaml build --no-cache && docker compose -f dev.compose.yaml up -d",
+    "docker-dev:build": "docker buildx build . -f docker/Dockerfile --target development -t snaily-cad-bot:dev",
+    "docker-prod:build": "docker buildx build . -f docker/Dockerfile --target production -t snaily-cad-bot:prod",
+    "docker:clean-build": "docker builder prune --force --all 2>&1 > /dev/null",
+    "docker-dev:start": "npm run docker-dev:build && docker compose -f dev.compose.yaml up -d && npm run docker:clean-build",
     "docker-dev:stop": "docker compose -f dev.compose.yaml down",
-    "docker-prod:start": "docker compose -f prod.compose.yaml build --no-cache && docker compose -f prod.compose.yaml up -d",
+    "docker-prod:start": "npm run docker-prod:build && docker compose -f prod.compose.yaml up -d && npm run docker:clean-build",
     "docker-prod:stop": "docker compose -f prod.compose.yaml down"
   },
   "dependencies": {

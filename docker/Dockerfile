@@ -1,8 +1,6 @@
 # Builder Image
 FROM node:18 as builder
 
-LABEL stage=builder
-
 WORKDIR /srv
 
 COPY . .

@@ -4,7 +4,7 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
-    "dev": "prisma migrate dev && tsx watch src/index.ts",
+    "dev": "prisma migrate dev && node --no-warnings --watch --import 'data:text/javascript,import { register } from \"node:module\"; import { pathToFileURL } from \"node:url\"; register(\"ts-node/esm\", pathToFileURL(\"./\"));' src/index.ts",
     "build": "prisma generate && swc src -d dist",
     "start": "prisma migrate deploy && node ./dist/index.js",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json}\" --ignore-path .gitignore",
@@ -37,6 +37,7 @@
     "prettier": "^3.0.3",
     "prisma": "^5.5.2",
     "regenerator-runtime": "^0.14.0",
+    "ts-node": "^10.9.2",
     "tsx": "^4.7.0",
     "typescript": "^5.2.2"
   },

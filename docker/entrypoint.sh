@@ -1,11 +1,22 @@
 #!/bin/sh
 
+echo ""
 echo "███████╗███╗   ██╗ █████╗ ██╗██╗  ██╗   ██╗ ██████╗ █████╗ ██████╗     ██████╗  ██████╗ ████████╗"
 echo "██╔════╝████╗  ██║██╔══██╗██║██║  ╚██╗ ██╔╝██╔════╝██╔══██╗██╔══██╗    ██╔══██╗██╔═══██╗╚══██╔══╝"
 echo "███████╗██╔██╗ ██║███████║██║██║   ╚████╔╝ ██║     ███████║██║  ██║    ██████╔╝██║   ██║   ██║"
 echo "╚════██║██║╚██╗██║██╔══██║██║██║    ╚██╔╝  ██║     ██╔══██║██║  ██║    ██╔══██╗██║   ██║   ██║"
 echo "███████║██║ ╚████║██║  ██║██║███████╗██║   ╚██████╗██║  ██║██████╔╝    ██████╔╝╚██████╔╝   ██║"
 echo "╚══════╝╚═╝  ╚═══╝╚═╝  ╚═╝╚═╝╚══════╝╚═╝    ╚═════╝╚═╝  ╚═╝╚═════╝     ╚═════╝  ╚═════╝    ╚═╝"
+echo ""
+echo "[INFO] Application is running in $NODE_ENV mode"
+echo ""
 
-[ $NODE_ENV == "development" ] && echo "App running in development mode" && yarn install && yarn run dev
-[ $NODE_ENV == "production" ] && echo "App running in production mode" && yarn run start
+if [ $NODE_ENV = "development" ]; then
+  echo "[INFO] Install node dependencies\n"
+  yarn install --silent
+  echo "[INFO] Run dev enviroment\n"
+  yarn run dev
+elif [ $NODE_ENV = "production" ]; then
+  echo "[INFO] Start application\n"
+  yarn run start
+fi

@@ -7,8 +7,8 @@ services:
     command: -p ${DB_PORT:-55545}
     env_file:
       - .env
-    ports:
-      - "${DB_PORT:-55545}:${DB_PORT:-55545}"
+    # ports:
+    #   - "${DB_PORT:-55545}:${DB_PORT:-55545}"
     volumes:
       - snailybot-db-data:/var/lib/postgresql/data
 

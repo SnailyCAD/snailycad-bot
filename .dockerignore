@@ -3,6 +3,8 @@ node_modules
 .env*
 dist
 .github
+.data
+.dev-data
 
 *.compose.yaml
 docker/*

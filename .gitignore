@@ -2,6 +2,8 @@ node_modules
 .vscode
 .env
 dist
+.data
+.dev-data
 
 .yarn/*
 !.yarn/patches

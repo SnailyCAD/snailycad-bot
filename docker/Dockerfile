@@ -19,7 +19,7 @@ WORKDIR /srv
 ENTRYPOINT ["/entrypoint.sh"]
 
 # Production Image
-FROM node:18-alpine as production
+FROM node:18 as production
 
 COPY docker/entrypoint.sh .
 

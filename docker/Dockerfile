@@ -5,7 +5,7 @@ WORKDIR /srv
 
 COPY . .
 
-RUN yarn install && yarn run build
+RUN yarn install --silent && yarn run build
 
 # Development Image
 FROM node:18 as development 
@@ -30,6 +30,6 @@ WORKDIR /app
 COPY --from=builder /srv/package.json /srv/yarn.lock /srv/.yarn /srv/prisma .
 COPY --from=builder /srv/dist ./dist
 
-RUN yarn install --production
+RUN yarn install --production  --silent
 
 ENTRYPOINT ["/entrypoint.sh"]

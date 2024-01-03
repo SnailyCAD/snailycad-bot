@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  postgres:
+    container_name: "snailycad-bot-postgres"
+    image: postgres
+    command: -p ${DB_PORT:-5554}
+    env_file:
+      - .env
+    ports:
+      - "${DB_PORT:-5554}:${DB_PORT:-5554}"
+    volumes:
+      - .dev-data:/var/lib/postgresql/data
+
+  api:
+    container_name: "snaily-cad-bot"
+    image: snaily-cad-bot:dev
+    volumes:
+      - .:/srv
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=development
+    depends_on:
+      - postgres

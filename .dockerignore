@@ -1,9 +1,14 @@
 node_modules
 .vscode
-.env
+.env*
 dist
+.github
 .data
 .dev-data
+
+*.compose.yaml
+docker/*
+!docker/entrypoint.sh
 
 .yarn/*
 !.yarn/patches
